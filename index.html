@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio Digital · Habilidades blandas, metacognición y gestión del tiempo</title>
+<meta name="description" content="Portafolio digital colaborativo de estudiantes de la Facultad de Ciencias de la Salud (USS, Pimentel) sobre habilidades blandas, metacognición y gestión del tiempo.">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --text:#1d2a2e; --muted:#566468;
+  --accent:#0f6b6b; --accent-ink:#ffffff; --line:#dcd9d0; --soft:#e3f0ee;
+  --c1:#b4472f; --c2:#0f6b6b; --c3:#8a6a0c;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121a1c; --surface:#1a2427; --text:#e8eeee; --muted:#9fb0b3; --accent:#4fc1b8; --accent-ink:#06201f; --line:#2c393c; --soft:#1e3330; --c1:#ef8a72; --c2:#4fc1b8; --c3:#e0bd55;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,nav,.tag,.btn,.eyebrow{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-ink);padding:8px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+header.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .in{max-width:1040px;margin:auto;padding:10px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:700 15px system-ui,sans-serif;color:var(--text);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav a{font-size:14px;text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:6px}
+nav a:hover,nav a:focus-visible{background:var(--soft);color:var(--text)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+main{max-width:1040px;margin:auto;padding:0 16px}
+.hero{padding:64px 0 40px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.1;margin:0 0 18px;letter-spacing:-.02em;max-width:20ch}
+.lead{font-size:19px;color:var(--muted);max-width:60ch;margin:0 0 24px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent);margin-left:8px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;margin:0 0 6px;letter-spacing:-.01em}
+h2 .n{color:var(--muted);font-weight:400;margin-right:8px}
+h3{font-size:19px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card p{margin:6px 0}
+.axis{border-top:5px solid var(--c)}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;background:var(--soft);color:var(--text);margin-bottom:8px}
+.tag.todo{background:transparent;border:1.5px dashed var(--muted);color:var(--muted)}
+dl.ev{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font:14px/1.5 system-ui,sans-serif;margin:12px 0 0}
+dl.ev dt{color:var(--muted)} dl.ev dd{margin:0}
+.person{text-align:left}
+.avatar{width:52px;height:52px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font:700 18px system-ui;color:var(--accent);margin-bottom:10px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 14px 56px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 14px system-ui}
+.note{border-left:4px solid var(--c3);background:var(--surface);padding:12px 16px;border-radius:0 8px 8px 0;font-size:15px;color:var(--muted)}
+ol.refs{padding-left:22px;font-size:15px}
+ol.refs li{margin-bottom:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font:600 16px system-ui,sans-serif}
+footer{border-top:1px solid var(--line);padding:28px 16px;text-align:center;color:var(--muted);font:14px system-ui,sans-serif}
+@media(max-width:640px){.btn.ghost{margin:10px 0 0}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="bar">
+  <div class="in">
+    <a class="brand" href="#inicio">Portafolio · Herramientas Digitales</a>
+    <nav aria-label="Navegación principal">
+      <a href="#proposito">Propósito</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#formacion">Formación</a>
+      <a href="#evidencias">Evidencias</a>
+      <a href="#reflexion">Reflexión</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#referencias">Referencias</a>
+      <a href="#anexos">Anexos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section id="inicio" class="hero" style="border-top:0">
+  <p class="eyebrow">Facultad de Ciencias de la Salud · Universidad Señor de Sipán · Pimentel, Perú</p>
+  <h1>Habilidades blandas, metacognición y gestión del tiempo</h1>
+  <p class="lead">Portafolio digital colaborativo que reúne evidencias de aprendizaje, reflexiones y metas de mejora para fortalecer el rendimiento académico en estudiantes de Medicina, Enfermería y Tecnología Médica.</p>
+  <a class="btn" href="#evidencias">Ver evidencias</a>
+  <a class="btn ghost" href="#proposito">Conocer el propósito</a>
+</section>
+
+<section id="proposito">
+  <h2><span class="n">1</span>Propósito y objetivos</h2>
+  <p class="sub">Curso de Herramientas Digitales · Segundo ciclo · Sección Q · Docente: Luz Cesarina Bustamante Márquez</p>
+  <div class="grid g3">
+    <div class="card"><h3>Objetivo</h3><p>Presentar evidencias académicas auténticas y reflexiones sobre habilidades blandas, estrategias metacognitivas y gestión del tiempo, para apoyar la organización del aprendizaje y el reconocimiento de metas de mejora.</p></div>
+    <div class="card"><h3>Pregunta orientadora</h3><p>¿Cómo organizar un portafolio interdisciplinario que ayude a documentar y reflexionar sobre estas tres dimensiones en la experiencia académica?</p></div>
+    <div class="card"><h3>Alcance</h3><p>Es un producto del curso, no una investigación de campo. No mide notas ni promete que, por sí solo, el portafolio las eleve.</p></div>
+  </div>
+</section>
+
+<section id="equipo">
+  <h2><span class="n">2</span>Equipo interdisciplinario</h2>
+  <p class="sub">Medicina · Enfermería · Tecnología Médica. Los datos personales se publican solo con consentimiento de cada integrante.</p>
+  <div class="grid g3">
+    <div class="card person"><div class="avatar" aria-hidden="true">EF</div><h3>Elyver Fernandez Campos</h3><p>Carrera: <em>(completar)</em></p><p>Aporte: <em>(completar)</em></p></div>
+    <div class="card person"><div class="avatar" aria-hidden="true">DM</div><h3>Dayana Malca Garcia</h3><p>Carrera: <em>(completar)</em></p><p>Aporte: <em>(completar)</em></p></div>
+    <div class="card person"><div class="avatar" aria-hidden="true">XT</div><h3>Xiomara Torres Vasquez</h3><p>Carrera: <em>(completar)</em></p><p>Aporte: <em>(completar)</em></p></div>
+    <div class="card person"><div class="avatar" aria-hidden="true">+</div><h3>Cuarto integrante</h3><p><em>(agregar nombre, carrera y aporte)</em></p></div>
+  </div>
+</section>
+
+<section id="formacion">
+  <h2><span class="n">3</span>Formación en ciencias de la salud</h2>
+  <p class="sub">Contexto USS–Pimentel y por qué estas tres dimensiones importan.</p>
+  <p>La formación sanitaria integra conocimientos disciplinares con capacidades para comunicarse, colaborar, reflexionar sobre el propio aprendizaje y organizar responsabilidades. La literatura destaca la comunicación, la empatía, la autorregulación emocional y la colaboración como competencias relevantes (1).</p>
+  <p>La evidencia sobre su relación con las calificaciones es variada: por eso se tratan como <strong>recursos formativos y reflexivos</strong>, no como garantía de mejores notas (2).</p>
+  <div class="grid g3" style="margin-top:20px">
+    <div class="card axis" style="--c:var(--c1)"><h3>Habilidades blandas</h3><p>Comunicación respetuosa, escucha activa, trabajo en equipo, empatía, responsabilidad, pensamiento crítico y autorregulación emocional (1).</p></div>
+    <div class="card axis" style="--c:var(--c2)"><h3>Metacognición</h3><p>Ciclo de planificar, monitorear y evaluar el propio aprendizaje; en estudiantes de Medicina el monitoreo predomina sobre la planificación y la evaluación (7).</p></div>
+    <div class="card axis" style="--c:var(--c3)"><h3>Gestión del tiempo</h3><p>Planificar, priorizar y cumplir plazos. En educación médica preclínica se asocia positivamente con el rendimiento (r = 0,39), sin demostrar causalidad (9).</p></div>
+  </div>
+</section>
+
+<section id="evidencias">
+  <h2><span class="n">4</span>Evidencias de aprendizaje</h2>
+  <p class="sub">Cada evidencia sigue la misma ficha. Las que aún no existen se marcan como «por elaborar» y no se presentan como realizadas.</p>
+
+  <h3 style="margin-top:8px">Habilidades blandas</h3>
+  <div class="grid g3" style="margin-bottom:28px">
+    <article class="card axis" style="--c:var(--c1)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Presentación grupal sobre comunicación y colaboración</h3>
+      <dl class="ev"><dt>Curso</dt><dd>(completar) · fecha</dd><dt>Autores</dt><dd>(roles de cada integrante)</dd><dt>Habilidad</dt><dd>Comunicación y trabajo en equipo</dd><dt>Archivo</dt><dd>(enlace)</dd><dt>Reflexión</dt><dd>(situación, decisión, evidencia, acción de mejora)</dd></dl>
+    </article>
+    <article class="card axis" style="--c:var(--c1)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Infografía elaborada en equipo</h3>
+      <dl class="ev"><dt>Curso</dt><dd>(completar) · fecha</dd><dt>Autores</dt><dd>(distribución de roles)</dd><dt>Habilidad</dt><dd>Colaboración, revisión entre pares</dd><dt>Archivo</dt><dd>(imagen/enlace)</dd><dt>Reflexión</dt><dd>(completar)</dd></dl>
+    </article>
+  </div>
+
+  <h3>Metacognición</h3>
+  <div class="grid g3" style="margin-bottom:28px">
+    <article class="card axis" style="--c:var(--c2)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Infografía del ciclo metacognitivo</h3>
+      <dl class="ev"><dt>Objetivo</dt><dd>Explicar planificar, monitorear y evaluar</dd><dt>Archivo</dt><dd>(imagen/enlace)</dd><dt>Reflexión</dt><dd>¿Qué debo aprender? ¿Cómo compruebo que comprendo? ¿Qué cambiaré la próxima vez?</dd></dl>
+    </article>
+    <article class="card axis" style="--c:var(--c2)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Reflexión individual con borrador y versión revisada</h3>
+      <dl class="ev"><dt>Objetivo</dt><dd>Mostrar proceso y mejora</dd><dt>Archivo</dt><dd>(enlace)</dd><dt>Siguiente acción</dt><dd>(completar)</dd></dl>
+    </article>
+  </div>
+
+  <h3>Gestión del tiempo</h3>
+  <div class="grid g3">
+    <article class="card axis" style="--c:var(--c3)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Plan semanal de estudio</h3>
+      <dl class="ev"><dt>Objetivo</dt><dd>Calendarizar bloques de estudio con pausas</dd><dt>Archivo</dt><dd>(enlace)</dd><dt>Reflexión</dt><dd>¿Qué funcionó y qué debo ajustar?</dd></dl>
+    </article>
+    <article class="card axis" style="--c:var(--c3)">
+      <span class="tag todo">Por elaborar</span>
+      <h3>Matriz de prioridades y registro de cumplimiento</h3>
+      <dl class="ev"><dt>Objetivo</dt><dd>Priorizar tareas y revisar avances</dd><dt>Archivo</dt><dd>(enlace)</dd><dt>Siguiente acción</dt><dd>(completar)</dd></dl>
+    </article>
+  </div>
+  <p class="note" style="margin-top:24px">No se publican horarios sensibles, ubicación en tiempo real, datos de pacientes ni imágenes identificables.</p>
+</section>
+
+<section id="reflexion">
+  <h2><span class="n">5</span>Reflexión integradora y metas de mejora</h2>
+  <p class="sub">Los tres ejes se conectan: planificar una tarea activa a la vez la gestión del tiempo y la metacognición; coordinar un trabajo en equipo pone en práctica comunicación, responsabilidad y autorregulación.</p>
+  <ol class="steps">
+    <li><strong>Aprendizajes.</strong> <em>(Resumir qué aprendió el equipo, con referencia a una evidencia concreta.)</em></li>
+    <li><strong>Retos.</strong> <em>(Dificultades encontradas y cómo se enfrentaron.)</em></li>
+    <li><strong>Decisiones de mejora.</strong> <em>(Acciones observables para el próximo periodo.)</em></li>
+    <li><strong>Metas con fecha de revisión.</strong> <em>(Meta · responsable · fecha.)</em></li>
+  </ol>
+</section>
+
+<section id="recursos">
+  <h2><span class="n">6</span>Recursos multimedia y herramientas digitales</h2>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>Previstos</h3><p>Infografía del ciclo metacognitivo, plan semanal de estudio, presentación breve sobre colaboración interdisciplinaria y video de bienvenida sin información sensible.</p></div>
+    <div class="card"><h3>Herramientas</h3><p>Procesador de texto, Zotero (referencias), herramienta de diagramación, GitHub (control de versiones y publicación) y asistencia de redacción con revisión humana.</p></div>
+    <div class="card"><h3>Accesibilidad</h3><p>Textos alternativos, subtítulos o transcripción, contraste legible, navegación consistente y lectura cómoda en móvil.</p></div>
+  </div>
+</section>
+
+<section id="referencias">
+  <h2><span class="n">7</span>Referencias (Vancouver)</h2>
+  <ol class="refs">
+    <li>Sancho-Cantus D, Cubero-Plazas L, Botella Navas M, Castellano-Rioja E, Cañabate Ros M. Importance of soft skills in health sciences students and their repercussion after the COVID-19 epidemic: scoping review. Int J Environ Res Public Health. 2023;20(6):4901. doi:10.3390/ijerph20064901.</li>
+    <li>Singh N, Kulkarni S, Gupta R. Is emotional intelligence related to objective parameters of academic performance in medical, dental, and nursing students: a systematic review. Educ Health (Abingdon). 2020. doi:10.4103/efh.efh_208_17.</li>
+    <li>Universidad Señor de Sipán. Semilleros de investigación: líneas de investigación institucionales [Internet]. Pimentel: Vicerrectorado de Investigación; [citado 2026 Oct 23]. Disponible en: <a href="https://www.investigacion.uss.edu.pe/p/semilleros.html">https://www.investigacion.uss.edu.pe/p/semilleros.html</a></li>
+    <li>United Nations, Department of Economic and Social Affairs. Goal 4: Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all [Internet]. New York: United Nations; [citado 2026 Oct 23]. Disponible en: <a href="https://sdgs.un.org/goals/goal4">https://sdgs.un.org/goals/goal4</a></li>
+    <li>Tan R, Ting JJQ, Hong DZ, Lim AJS, Ong YT, Pisupati A, et al. Medical student portfolios: a systematic scoping review. J Med Educ Curric Dev. 2022;9:23821205221076022. doi:10.1177/23821205221076022.</li>
+    <li>Montini C, Mellucci C, Galletti C. Structure and utility of e-portfolios for reflection and learning in healthcare professional education: a narrative review. Clin Teach. 2026. doi:10.1111/tct.70366.</li>
+    <li>Versteeg M, Bressers G, Wijnen-Meijer M, Ommering B, de Beaufort AD, Steendijk P. What were you thinking? Medical students' metacognition and perceptions of self-regulated learning. Teach Learn Med. 2021. doi:10.1080/10401334.2021.1889559.</li>
+    <li>Ibrahim R, Khalaf A. Determination of metacognitive learning strategies and academic performance of nursing students: a descriptive-correlational study. Dubai Med J. 2025;8(3). doi:10.18502/dmj.v8i3.19858.</li>
+    <li>Ahmady S, Khajeali N, Kalantarion M, Sharifi F, Yaseri M. Relation between stress, time management, and academic achievement in preclinical medical education: a systematic review and meta-analysis. J Educ Health Promot. 2021;10:36. doi:10.4103/jehp.jehp_600_20.</li>
+  </ol>
+</section>
+
+<section id="anexos">
+  <h2><span class="n">8</span>Anexos</h2>
+  <p class="sub">Solo material pertinente y autorizado; nunca registros personales o clínicos.</p>
+  <details><summary>Mapa de navegación del portafolio</summary>
+    <p>Inicio → Propósito y objetivos → Equipo → Formación en salud → Evidencias (habilidades blandas, metacognición, gestión del tiempo) → Reflexión integradora → Recursos → Referencias → Anexos.</p></details>
+  <details><summary>Plantilla de ficha de evidencia</summary>
+    <p>Nombre del producto · Curso y fecha · Autores y roles · Objetivo de aprendizaje · Habilidad o eje · Archivo, imagen o enlace · Reflexión con una evidencia concreta · Siguiente acción de mejora · Fuente o atribución.</p></details>
+  <details><summary>Lista de control para revisar el sitio</summary>
+    <p>Objetivos coherentes con las secciones · una evidencia real por eje cuando exista · reflexión junto a cada producto · citas y referencias consistentes · accesibilidad y vista móvil · enlaces funcionando · sin información privada · fechas actualizadas.</p></details>
+  <details><summary>Integridad académica y privacidad</summary>
+    <p>Todo contenido ajeno lleva atribución y cita Vancouver. No se presenta contenido generado por IA como evidencia de aprendizaje personal. Se retiran datos que identifiquen pacientes, centros de práctica o casos reales.</p></details>
+</section>
+
+</main>
+
+<footer>
+  Facultad de Ciencias de la Salud · Universidad Señor de Sipán · Pimentel, Perú · 2026<br>
+  Curso de Herramientas Digitales · Sección Q · Última actualización: noviembre 2026
+</footer>
+</body>
+</html>
